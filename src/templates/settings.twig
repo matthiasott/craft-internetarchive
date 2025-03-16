@@ -1,0 +1,13 @@
+{% import '_includes/forms.twig' as forms %}
+
+{% block content %}
+
+    {{ forms.lightswitchField({
+        first: true,
+        label: 'Send notifications to the Internet Archive',
+        instructions: 'Turn this off to temporarily disable URL sending.'|t,
+        name: 'sendUrls',
+        on: settings.sendUrls,
+    }) }}
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "_layouts/cp" %}
+{% set title = "Internet Archive Plugin"|t('craft-internetarchive') %}
+
+{% import '_includes/forms.twig' as forms %}
+
+{% block content %}
+
+    <form method="post">
+        {{ csrfInput() }}
+        {{ actionInput('craft-internetarchive/entries/save-all-urls') }}
+        <h3>Archive all URLs</h3>
+        <p>This will send the URLs for all active entries of your site to the Internet Archive.</p>
+    
+        {{ forms.submitButton({
+            label: "Save now"|t('craft-internetarchive'),
+            class: 'submit'
+        }) }}
+    </form>
+
+{% endblock %}

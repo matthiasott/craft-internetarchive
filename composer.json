@@ -1,0 +1,58 @@
+{
+  "name": "matthiasott/craft-internetarchive",
+  "description": "Craft CMS plugin that notifies the Internet Archive to archive entries on save.",
+  "type": "craft-plugin",
+  "license": "mit",
+  "authors": [
+    {
+      "name": "Matthias Ott",
+      "email": "mail@matthiasott.com",
+      "homepage": "https://matthiasott.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "mail@matthiasott.com",
+    "issues": "https://github.com/matthiasott/craft-internetarchive/issues?state=open",
+    "source": "https://github.com/matthiasott/craft-internetarchive",
+    "docs": "https://github.com/matthiasott/craft-internetarchive",
+    "rss": "https://github.com/matthiasott/craft-internetarchive/releases.atom"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=8.2",
+    "craftcms/cms": "^5.5.0"
+  },
+  "require-dev": {
+    "craftcms/ecs": "dev-main",
+    "craftcms/phpstan": "dev-main"
+  },
+  "autoload": {
+    "psr-4": {
+      "matthiasott\\internetarchive\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Internet Archive",
+    "handle": "craft-internetarchive",
+    "developer": "Matthias Ott",
+    "documentationUrl": "https://github.com/matthiasott/craft-internetarchive",
+    "class": "matthiasott\\internetarchive\\InternetArchive"
+  },
+  "scripts": {
+    "check-cs": "ecs check --ansi",
+    "fix-cs": "ecs check --ansi --fix",
+    "phpstan": "phpstan --memory-limit=1G"
+  },
+  "config": {
+    "sort-packages": true,
+    "platform": {
+      "php": "8.2"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
+  }
+}
